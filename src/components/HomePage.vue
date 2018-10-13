@@ -8,6 +8,10 @@
       <san-input width="160px" height="40px" padding="0px 20px" color="red" borderRadius="5px" fontSize="12px" placeholder="查询输入..."></san-input>
       <san-input-search @inputSearch="InputSearchWord"></san-input-search>
     </div>
+    <san-select></san-select>
+    <san-select></san-select>
+    <san-select></san-select>
+
 
     <san-table></san-table>
   </section>
@@ -18,6 +22,8 @@ import SanTable from "@/components/Common/SanTable";
 import SanButton from "@/components/Common/ButtonComponents/SanButton";
 import SanInput from "@/components/Common/SanInput";
 import SanInputSearch from "@/components/Common/SanInputSearch";
+import SanSelect from "@/components/Common/SanSelect";
+
 // import SanButton from "@/components/Common/SanButton";
 // import {dataFormat} from "qx_data_format"
 export default {
@@ -29,16 +35,18 @@ export default {
   created() {
     // console.log(dataFormat)
   },
-  methods:{
-    InputSearchWord(value){
-      console.log("..........")
+  methods: {
+    InputSearchWord(value) {
+      if (!value) return;
+      alert(value);
     }
   },
   components: {
     SanTable,
     SanButton,
     SanInput,
-    SanInputSearch
+    SanInputSearch,
+    SanSelect
   }
 };
 </script>

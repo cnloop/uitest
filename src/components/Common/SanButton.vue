@@ -1,7 +1,7 @@
 <template>
-    <span v-setCustomStyle class="sanButton">
+    <section v-setCustomStyle class="sanButton">
         <slot></slot>
-    </span>
+    </section>
 </template>
 <script>
 export default {

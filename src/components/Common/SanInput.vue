@@ -1,7 +1,7 @@
 <template>
-  <span class="sanInput">
+  <section class="sanInput">
     <input v-setCustomStyle type="text" placeholder="请输入...">
-  </span>
+  </section>
 </template>
 <script>
 export default {
@@ -56,7 +56,7 @@ export default {
 <style scoped>
 .sanInput {
   height: 40px;
-  display: inline-block;
+  display: inline-flex;
 }
 .sanInput input {
   -webkit-appearance: none;

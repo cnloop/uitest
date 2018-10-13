@@ -1,8 +1,8 @@
 <template>
-    <div class="sanInputSearch" v-setContainerStyle>
-        <input v-model="searchValue" v-inputFocus placeholder="请输入查询..." type="text">
-        <i class="iconfont" @click="clickIcon">&#xeef7;</i>
-    </div>
+  <section class="sanInputSearch" v-setContainerStyle>
+    <input v-model="searchValue" v-inputFocus placeholder="请输入查询..." type="text">
+    <i class="iconfont" @click="clickIcon">&#xeef7;</i>
+  </section>
 </template>
 <script>
 export default {
@@ -89,10 +89,11 @@ export default {
   border-radius: 4px;
   border: 1px solid #dcdfe6;
   box-sizing: border-box;
-  display: inline-flex;
+  /* display: inline-flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; */
   padding-right: 5px;
+  position: relative;
 }
 .sanInputSearch input {
   width: 100%;
@@ -104,7 +105,8 @@ export default {
   box-sizing: border-box;
   color: #606266;
   outline: none;
-  padding: 0 15px;
+  padding-left: 15px;
+  padding-right: 30px;
 }
 .sanInputSearch input::placeholder {
   color: #ccc;
@@ -112,6 +114,9 @@ export default {
 .sanInputSearch i {
   font-size: 22px;
   cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 4px;
 }
 </style>
 

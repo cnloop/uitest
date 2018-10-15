@@ -4,14 +4,14 @@
       <san-button type="default">默认按钮</san-button>
       <san-button type="view">默认按钮</san-button>
       <san-button type="update">默认按钮</san-button>
-      <san-button type="delete" hight="40px" fontSize="9px" color="#fff" width="200px" borderRadius="10px">默认按钮</san-button>
+       <san-button type="update"  fontSize="17px" width="200px">默认按钮</san-button>
+      <san-button type="delete" hight="40px" fontSize="17px" color="#fff" width="200px" borderRadius="5px">默认按钮</san-button>
       <san-input width="160px" height="40px" padding="0px 20px" color="red" borderRadius="5px" fontSize="12px" placeholder="查询输入..."></san-input>
       <san-input-search @inputSearch="InputSearchWord"></san-input-search>
     </div>
     <san-select></san-select>
     <san-select></san-select>
     <san-select></san-select>
-
 
     <san-table></san-table>
   </section>
@@ -60,8 +60,8 @@ export default {
   border-top: 4px solid #2666e9;
 }
 .search {
-  display: flex;
-  align-items: center;
+  height: 60px;
   padding: 20px;
+  line-height: 60px;
 }
 </style>

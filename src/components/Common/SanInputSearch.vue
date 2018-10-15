@@ -30,6 +30,7 @@ export default {
     setHeight(el, _attrs) {
       if (!_attrs.height) return;
       el.parentNode.height = _attrs.height;
+      el.parentNode.lineHeight = _attrs.height;
     },
     setBorderRadius(el, _attrs) {
       if (!_attrs.borderRadius) return;
@@ -86,18 +87,18 @@ export default {
 .sanInputSearch {
   width: 200px;
   height: 40px;
+  line-height: 40px;
+  display: inline-block;
   border-radius: 4px;
   border: 1px solid #dcdfe6;
   box-sizing: border-box;
-  /* display: inline-flex;
-  justify-content: space-between;
-  align-items: center; */
   padding-right: 5px;
   position: relative;
+  padding-bottom: 2px;
 }
 .sanInputSearch input {
   width: 100%;
-  height: 100%;
+  height: 90%;
   -webkit-appearance: none;
   background-color: #fff;
   background-image: none;
@@ -115,8 +116,9 @@ export default {
   font-size: 22px;
   cursor: pointer;
   position: absolute;
-  top: 7px;
+  top: 50%;
   right: 4px;
+  transform: translateY(-50%);
 }
 </style>
 

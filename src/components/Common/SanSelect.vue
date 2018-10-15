@@ -56,19 +56,23 @@ export default {
 .sanSelect {
   width: 136px;
   height: 40px;
+  line-height: 40px;
   border: 1px solid #d2cdcd;
   border-radius: 2px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
+  display: inline-block;
   box-sizing: border-box;
   padding: 0px 10px;
   position: relative;
 }
 .sanSelect i {
-  margin-top: 4px;
+  float: right;
   transition: transform 0.2s;
 }
+
+.sanSelect > span {
+  float: left;
+}
+
 .sanSelect span {
   cursor: pointer;
 }
@@ -77,16 +81,15 @@ export default {
   top: 44px;
   left: -1px;
   min-width: 136px;
-  display: flex;
-  flex-direction: column;
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0px 1px 5px 0px #ccc;
 }
 .DropDownMenu span {
+  display: block;
   padding: 0px 11px;
-  margin-left: -1px;
-  margin-bottom: -1px;
+  /* margin-left: -1px; */
+  /* margin-bottom: -1px; */
   line-height: 35px;
 }
 .DropDownMenu span:hover {

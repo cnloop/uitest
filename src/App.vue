@@ -3,14 +3,16 @@
     <!-- 高度 200px -->
     <div class="header">
       <div class="top">
-        <header-title></header-title>
-        <header-user-info></header-user-info>
+        <header-title class="left"></header-title>
+        <header-user-info class="right"></header-user-info>
       </div>
       <nav-bar class="bottom"></nav-bar>
     </div>
     <section class="container">
       <!-- 宽度 280px -->
-      <left-aside class="aside"></left-aside>
+      <div class="aside">
+        <left-aside></left-aside>
+      </div>
       <div class="main">
         <router-view />
       </div>
@@ -86,6 +88,31 @@ th,
 td {
   padding: 0px;
 }
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+@font-face {
+  font-family: "iconfont"; /* project id 858289 */
+  src: url('//at.alicdn.com/t/font_858289_d3naa3dc6ba.woff') format('woff');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------------------------------------------------- */
+
 html {
   font-family: Helvetica, Arial, sans-serif;
 }
@@ -96,58 +123,78 @@ body {
 }
 #app {
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 150px;
   background-image: linear-gradient(rgb(12, 29, 64), rgb(13, 25, 54));
-  padding-top: 12px;
-  padding-left: 25px;
-  padding-right: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  box-sizing: border-box;
 }
 .header .top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 18px;
+  padding-left: 25px;
+  padding-right: 12px;
+  box-sizing: border-box;
+}
+
+.header .top .left {
+  float: left;
+}
+
+.header .top .right {
+  float: right;
+}
+
+.header .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-left: 25px;
+  box-sizing: border-box;
 }
 
 .container {
-  height: 100%;
-  display: flex;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-sizing: border-box;
 }
 
 .aside {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 280px;
-  height: 100%;
+  box-sizing: border-box;
 }
 
 .main {
-  width: 100%;
-  height: 100%;
   background-color: #fff;
   overflow-x: hidden;
-  /* overflow-y: hidden; */
+  position: absolute;
+  left: 280px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
 }
 .active {
   color: #26c5d1 !important;
-}
-
-@font-face {
-  font-family: "iconfont"; /* project id 858289 */
-  src: url("//at.alicdn.com/t/font_858289_jkoy0qe09aa.woff") format("woff");
-}
-
-.iconfont {
-  font-family: "iconfont" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
 }
 </style>

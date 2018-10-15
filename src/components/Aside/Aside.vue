@@ -2,13 +2,13 @@
   <section class="aside">
     <div class="mainmenu" ref="content-manager" v-showMenuItems>
       <div class="mainmenu-title">
-        <div>
+        <div class="left">
           <span>
             <i class="iconfont">&#xe621;</i>
           </span>
           <span>内容管理</span>
         </div>
-        <div>
+        <div class="right">
           <i class="iconfont arrow">&#xe634;</i>
         </div>
       </div>
@@ -19,13 +19,13 @@
     </div>
     <div class="mainmenu" ref="user-manager" v-showMenuItems>
       <div class="mainmenu-title">
-        <div>
+        <div class="left">
           <span>
             <i class="iconfont">&#xe621;</i>
           </span>
           <span>用户管理</span>
         </div>
-        <div>
+        <div class="right">
           <i class="iconfont arrow">&#xe634;</i>
         </div>
       </div>
@@ -130,50 +130,51 @@ h1 {
   box-sizing: border-box;
   overflow: hidden;
   transition: height 0.15s ease-in-out;
-  /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.8);
 }
 .mainmenu-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
   cursor: pointer;
   height: 60px;
+  line-height: 60px;
   padding: 0 10px;
+  box-sizing: border-box;
 }
 
-.mainmenu-title div {
-  display: flex;
-  align-items: center;
+.mainmenu-title .left {
+  float: left;
+}
+.mainmenu-title .right {
+  float: right;
 }
 
-.mainmenu-title i {
+.mainmenu-title .left span i {
   font-size: 22px;
 }
 
-.mainmenu-title span {
-  display: flex;
+.mainmenu-title .left span {
   font-size: 20px;
   padding-left: 10px;
 }
 
 .mainmenu-title .arrow {
-  display: flex;
+  display: inline-block;
   font-size: 14px;
   transform: rotate(0deg);
   transition: transform 0.15s ease-in-out;
 }
 .menu-items-container {
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
   background-color: rgb(7, 58, 96);
 }
 .menu-item {
-  display: flex;
-  align-items: center;
-  padding-left: 60px;
+  display: block;
   height: 50px;
+  line-height: 50px;
+  padding-left: 70px;
   border-left: 3px solid #2be2ee;
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;

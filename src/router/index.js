@@ -12,6 +12,9 @@ import ActiveUser from '@/components/UserManager/ActiveUser'
 
 import MyTools from '@/components/MyTools/MyTools'
 
+import Machine from '@/components/Machine'
+
+
 
 
 
@@ -59,7 +62,12 @@ const test = {
   component: MyTools
 }
 
+const machine = {
+  path: "/machine",
+  component: Machine
+}
+
 export default new Router({
   linkActiveClass: "active",
-  routes: [homePage, contentRouter, userRouter, test]
+  routes: [homePage, contentRouter, userRouter, test, machine]
 })

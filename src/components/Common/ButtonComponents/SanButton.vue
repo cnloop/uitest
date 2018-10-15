@@ -1,7 +1,7 @@
 <template>
-    <span v-setCustomStyle class="sanButton">
-        <slot></slot>
-    </span>
+  <span v-setCustomStyle class="sanButton">
+    <slot></slot>
+  </span>
 </template>
 <script>
 export default {
@@ -61,6 +61,7 @@ export default {
     setHeight(el, _attrs) {
       if (!_attrs.height) return;
       el.style.height = _attrs.height;
+      el.style.lineHeight = _attrs.height;
     },
     setBorderRadius(el, _attrs) {
       if (!_attrs.borderRadius) return;
@@ -86,13 +87,12 @@ export default {
 </script>
 <style scoped>
 .sanButton {
-  width: 90px;
   height: 40px;
   color: #333;
   cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
   border-radius: 3px;
   font-size: 18px;
   box-sizing: border-box;

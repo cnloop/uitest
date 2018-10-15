@@ -56,7 +56,8 @@ export default {
 <style scoped>
 .sanInput {
   height: 40px;
-  display: inline-flex;
+  display: inline-block;
+  line-height: 40px;
 }
 .sanInput input {
   -webkit-appearance: none;

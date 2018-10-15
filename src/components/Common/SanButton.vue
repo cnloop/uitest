@@ -1,7 +1,7 @@
 <template>
-    <section v-setCustomStyle class="sanButton">
-        <slot></slot>
-    </section>
+  <section v-setCustomStyle class="sanButton">
+    <slot></slot>
+  </section>
 </template>
 <script>
 export default {
@@ -28,7 +28,6 @@ export default {
     },
     setBackgroundColorHover(el, _attrs) {
       if (!_attrs.backgroundColorHover) return;
-      console.log(111);
       el.onmouseover = function() {
         el.style.backgroundColor = `${_attrs.backgroundColorHover}`;
         console.log(el.style.backgroundColor);
@@ -68,16 +67,15 @@ export default {
   height: 50px;
   color: #fff;
   cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  text-align: center;
+  line-height: 50px;
   border-radius: 5px;
   border: 1px solid #ccc;
   background-color: #2666e8;
 }
 .sanButton:hover {
   border-color: #3a8ee6;
-  /* background-color: #460dff; */
   background-color: yellow;
 }
 </style>

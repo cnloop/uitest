@@ -1,5 +1,5 @@
 <template>
-    <section class="sanMachineInfo">
+    <section class="sanMachineInfo" @click="clickItem(event)">
         <div class="left">
 
         </div>
@@ -31,8 +31,8 @@
         </div>
         <div class="right">
             <div class="wrap">
-                <san-button type="update" width="60px" borderRadius="3px" height="30px" fontSize="15px">出库</san-button>
-                <san-button class="btn" type="view" width="70px" borderRadius="3px" height="30px" fontSize="15px">取消报废</san-button>
+                <san-button type="update" width="70px" borderRadius="3px" height="34px" fontSize="16px">出库</san-button>
+                <san-button class="btn" type="view" width="80px" borderRadius="3px" height="34px" fontSize="16px">取消报废</san-button>
             </div>
 
         </div>
@@ -42,6 +42,11 @@
 <script>
 import SanButton from "@/components/Common/ButtonComponents/SanButton";
 export default {
+  methods:{
+    clickItem(event){
+      this.$emit("selectItem",event)
+    }
+  },
   components: {
     SanButton
   }
@@ -53,7 +58,7 @@ export default {
   height: 160px;
   position: relative;
   background-color: #fff;
-  border: 1px solid #1dd2e4;
+  /* border: 1px solid #1dd2e4; */
   border-right-color: #fff;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;

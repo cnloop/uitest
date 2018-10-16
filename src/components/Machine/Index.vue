@@ -6,14 +6,16 @@
     <div class="right">
       <div class="wrap">
         <div class="itemList">
-          <san-machine-info class="item"></san-machine-info>
+          <san-machine-info @selectItem="selectItem" class="item"></san-machine-info>
           <san-machine-info class="item"></san-machine-info>
 
           <san-machine-info class="item"></san-machine-info>
           <san-machine-info class="item"></san-machine-info>
 
         </div>
-        <div class="info"></div>
+        <div class="info">
+          <san-machine-info-exp></san-machine-info-exp>
+        </div>
       </div>
 
     </div>
@@ -22,10 +24,15 @@
 <script>
 import SanList from "@/components/Common/SanList";
 import SanMachineInfo from "@/components/Common/SanMachineInfo";
+import SanMachineInfoExp from "@/components/Common/SanMachineInfoExp";
 export default {
+  methods: {
+    selectItem(item) {}
+  },
   components: {
     SanList,
-    SanMachineInfo
+    SanMachineInfo,
+    SanMachineInfoExp
   }
 };
 </script>
@@ -50,7 +57,7 @@ export default {
   top: 10px;
   right: 0;
   bottom: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .machine .right .wrap {
@@ -76,8 +83,8 @@ export default {
   left: 801px;
   right: 0;
   top: 0;
-  background-color: pink;
   border: 1px solid #1dd2e4;
+  background-color: #fff;
   box-sizing: border-box;
 }
 .item {

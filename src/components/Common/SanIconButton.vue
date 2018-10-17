@@ -1,7 +1,10 @@
 <template>
-  <section v-setCustomStyle class="sanButton">
-    <slot></slot>
-  </section>
+    <section v-setCustomStyle class="sanIconButton">
+        <slot name="iconfont"></slot>
+        <span>
+            <slot></slot>
+        </span>
+    </section>
 </template>
 <script>
 export default {
@@ -63,20 +66,32 @@ export default {
 };
 </script>
 <style scoped>
-.sanButton {
-  width: 100px;
-  height: 50px;
+.sanIconButton {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 5px;
+  background-color: #2666e8;
+  position: relative;
   color: #fff;
   cursor: pointer;
-  display: block;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  background-color: #2666e8;
+  font-size: 20px;
 }
-.sanButton:hover {
-  border-color: #3a8ee6;
+.sanIconButton:hover {
+  background-color: #3a8ee6;
+}
+.sanIconButton > i {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translate(0, -50%);
+}
+.sanIconButton > span {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translate(0, -50%);
 }
 </style>
 

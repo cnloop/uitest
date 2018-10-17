@@ -90,13 +90,6 @@ export default {
 };
 </script>
 <style scoped>
-ul {
-  /* height: 0px; */
-  /* overflow:hidden; */
-}
-li {
-  /* height: 0px; */
-  /* overflow: hidden; */
-}
+
 </style>
 

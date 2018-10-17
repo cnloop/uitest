@@ -4,10 +4,13 @@
       <san-button type="default">默认按钮</san-button>
       <san-button type="view">默认按钮</san-button>
       <san-button type="update">默认按钮</san-button>
-       <san-button type="update"  fontSize="17px" width="200px">默认按钮</san-button>
+      <san-button type="update" fontSize="17px" width="200px">默认按钮</san-button>
       <san-button type="delete" hight="40px" fontSize="17px" color="#fff" width="200px" borderRadius="5px">默认按钮</san-button>
       <san-input width="160px" height="40px" padding="0px 20px" color="red" borderRadius="5px" fontSize="12px" placeholder="查询输入..."></san-input>
       <san-input-search @inputSearch="InputSearchWord"></san-input-search>
+      <san-icon-button>
+        <i class="iconfont" slot="iconfont">&#xe602;</i>查询
+      </san-icon-button>
     </div>
     <san-select></san-select>
     <san-select></san-select>
@@ -23,6 +26,7 @@ import SanButton from "@/components/Common/ButtonComponents/SanButton";
 import SanInput from "@/components/Common/SanInput";
 import SanInputSearch from "@/components/Common/SanInputSearch";
 import SanSelect from "@/components/Common/SanSelect";
+import SanIconButton from "@/components/Common/SanIconButton";
 
 // import SanButton from "@/components/Common/SanButton";
 // import {dataFormat} from "qx_data_format"
@@ -46,7 +50,8 @@ export default {
     SanButton,
     SanInput,
     SanInputSearch,
-    SanSelect
+    SanSelect,
+    SanIconButton
   }
 };
 </script>

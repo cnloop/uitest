@@ -1,52 +1,47 @@
 <template>
-    <section class="sanMachineInfo" @click="clickItem(event)">
-        <div class="left">
+  <section class="sanMachineInfo">
+    <div class="left">
 
-        </div>
-        <div class="center">
-            <div class="wrap">
-                <h4 class="top">设备详情</h4>
-                <table class="bottom">
-                    <tr>
-                        <td class="itemTitle">设备名称</td>
-                        <td class="itemContent">1#主水泵</td>
-                        <td class="itemTitle">生产厂家</td>
-                        <td class="itemContent">银川起重厂</td>
-                    </tr>
-                    <tr>
-                        <td class="itemTitle">设备编号</td>
-                        <td class="itemContent">96542</td>
-                        <td class="itemTitle">出厂日期</td>
-                        <td class="itemContent">2017-06-23</td>
-                    </tr>
-                    <tr>
-                        <td class="itemTitle">规格型号</td>
-                        <td class="itemContent">LD-A</td>
-                        <td class="itemTitle">入库时间</td>
-                        <td class="itemContent">2017-08-23</td>
-                    </tr>
-                </table>
-            </div>
+    </div>
+    <div class="center">
+      <div class="wrap">
+        <h4 class="top">设备详情</h4>
+        <table class="bottom">
+          <tr>
+            <td class="itemTitle">设备名称</td>
+            <td class="itemContent">1#主水泵</td>
+            <td class="itemTitle">生产厂家</td>
+            <td class="itemContent">银川起重厂</td>
+          </tr>
+          <tr>
+            <td class="itemTitle">设备编号</td>
+            <td class="itemContent">96542</td>
+            <td class="itemTitle">出厂日期</td>
+            <td class="itemContent">2017-06-23</td>
+          </tr>
+          <tr>
+            <td class="itemTitle">规格型号</td>
+            <td class="itemContent">LD-A</td>
+            <td class="itemTitle">入库时间</td>
+            <td class="itemContent">2017-08-23</td>
+          </tr>
+        </table>
+      </div>
 
-        </div>
-        <div class="right">
-            <div class="wrap">
-                <san-button type="update" width="70px" borderRadius="3px" height="34px" fontSize="16px">出库</san-button>
-                <san-button class="btn" type="view" width="80px" borderRadius="3px" height="34px" fontSize="16px">取消报废</san-button>
-            </div>
+    </div>
+    <div class="right">
+      <div class="wrap">
+        <san-button type="update" width="70px" borderRadius="3px" height="34px" fontSize="16px">出库</san-button>
+        <san-button class="btn" type="view" width="80px" borderRadius="3px" height="34px" fontSize="16px">取消报废</san-button>
+      </div>
 
-        </div>
-        <span class="lable">主水泵1</span>
-    </section>
+    </div>
+    <span class="lable">主水泵1</span>
+  </section>
 </template>
 <script>
 import SanButton from "@/components/Common/ButtonComponents/SanButton";
 export default {
-  methods:{
-    clickItem(event){
-      this.$emit("selectItem",event)
-    }
-  },
   components: {
     SanButton
   }
@@ -57,9 +52,9 @@ export default {
   width: 800px;
   height: 160px;
   position: relative;
+  box-sizing: border-box;
   background-color: #fff;
-  /* border: 1px solid #1dd2e4; */
-  border-right-color: #fff;
+  /* border-right-color: #fff; */
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }

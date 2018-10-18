@@ -19,7 +19,9 @@ module.exports = {
     //   }
     // }
     proxyTable: {
-
+      "/": {
+        target: 'http://39.105.113.7:8020',
+      }
     },
 
     // Various Dev Server settings

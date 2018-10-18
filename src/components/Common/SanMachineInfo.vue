@@ -1,7 +1,7 @@
 <template>
   <section class="sanMachineInfo">
-    <div class="left">
-
+    <div class="left" ref="equipmentImg">
+      <img :src="loadImg(tableListItem)" alt="">
     </div>
     <div class="center">
       <div class="wrap">
@@ -9,21 +9,21 @@
         <table class="bottom">
           <tr>
             <td class="itemTitle">设备名称</td>
-            <td class="itemContent">1#主水泵</td>
+            <td class="itemContent">{{equipmentName}}</td>
             <td class="itemTitle">生产厂家</td>
-            <td class="itemContent">银川起重厂</td>
+            <td class="itemContent">{{Manufacturer}}</td>
           </tr>
           <tr>
             <td class="itemTitle">设备编号</td>
-            <td class="itemContent">96542</td>
-            <td class="itemTitle">出厂日期</td>
-            <td class="itemContent">2017-06-23</td>
+            <td class="itemContent">{{equipmentNumber}}</td>
+            <td class="itemTitle">安装日期</td>
+            <td class="itemContent">{{InstallationTime}}</td>
           </tr>
           <tr>
             <td class="itemTitle">规格型号</td>
-            <td class="itemContent">LD-A</td>
+            <td class="itemContent"></td>
             <td class="itemTitle">入库时间</td>
-            <td class="itemContent">2017-08-23</td>
+            <td class="itemContent">{{StorageTime}}</td>
           </tr>
         </table>
       </div>
@@ -36,12 +36,41 @@
       </div>
 
     </div>
-    <span class="lable">主水泵1</span>
+    <span class="lable">{{equipmentName}}</span>
   </section>
 </template>
 <script>
 import SanButton from "@/components/Common/ButtonComponents/SanButton";
 export default {
+  props: ["tableListItem"],
+  data() {
+    return {
+      equipmentName: "", //设备名称
+      Manufacturer: "", //生产厂家
+      equipmentNumber: "", //设备编号
+      InstallationTime: "", //安装日期
+      SpecificationModel: "", //规则型号
+      StorageTime: "", //入库时间
+      equipmentImg: "" // 设备图片
+    };
+  },
+  created() {
+    this.loadData(this.tableListItem);
+  },
+  methods: {
+    loadData(tableListItem) {
+      this.equipmentName = tableListItem.deName;
+      this.Manufacturer = tableListItem.supplier;
+      this.equipmentNumber = tableListItem.deId;
+      this.InstallationTime = tableListItem.aztime;
+      this.StorageTime = tableListItem.updateDate;
+      // this.equipmentImg=tableListItem.picture;
+    },
+    loadImg(tableListItem) {
+      if (!tableListItem.picture) return `${require('@/assets/Bimg_01.png')}`;
+      return tableListItem.picture;
+    }
+  },
   components: {
     SanButton
   }
@@ -49,24 +78,32 @@ export default {
 </script>
 <style scoped>
 .sanMachineInfo {
-  width: 800px;
+  width: 900px;
   height: 160px;
   position: relative;
   box-sizing: border-box;
   background-color: #fff;
-  /* border-right-color: #fff; */
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 .sanMachineInfo .left {
   width: 180px;
+  line-height: 160px;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  background: url("../../assets/供水泵.jpg") center center;
-  background-size: 160px 100px;
-  background-repeat: no-repeat;
+  /* background: url("../../assets/供水泵.jpg") center center; */
+  /* background-size: 160px 100px;
+  background-repeat: no-repeat; */
+}
+.sanMachineInfo .left img {
+  width: 163px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .sanMachineInfo .center {
   position: absolute;
@@ -97,11 +134,12 @@ export default {
 }
 .sanMachineInfo .center .bottom .itemTitle {
   text-align: right;
-  padding: 5px 25px;
+  padding: 5px 14px;
 }
 .sanMachineInfo .center .bottom .itemContent {
   text-align: left;
-  padding: 5px 10px;
+  padding: 5px 0px;
+  min-width: 160px;
 }
 .sanMachineInfo .right {
   width: 200px;

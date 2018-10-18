@@ -35,14 +35,14 @@ export default {
 .topNav table {
   margin: 0 auto;
   width: 100%;
-  font-size: 18px;
+  font-size: 14px;
   white-space: nowrap;
 }
 .topNav tr {
   border-bottom: 1px solid #ddd;
 }
 .topNav td {
-  padding: 20px 10px;
+  padding: 20px 5px;
   font-weight: 600;
   cursor: pointer;
   color: #6e6e6e;

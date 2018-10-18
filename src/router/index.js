@@ -14,6 +14,10 @@ import MyTools from '@/components/MyTools/MyTools'
 
 import Machine from '@/components/Machine'
 
+import Ceshi from '@/components/Ceshi'
+import Show from '@/components/Show'
+
+
 
 
 
@@ -67,7 +71,18 @@ const machine = {
   component: Machine
 }
 
+
+const ceshi = {
+  path: "/ceshi",
+  component: Ceshi
+}
+
+const show = {
+  path: "/show",
+  component: Show
+}
+
 export default new Router({
   linkActiveClass: "active",
-  routes: [homePage, contentRouter, userRouter, test, machine]
+  routes: [homePage, contentRouter, userRouter, test, machine, ceshi, show]
 })

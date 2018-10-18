@@ -47,10 +47,10 @@ export default {};
   border-bottom: 2px solid #ddd;
 }
 .maintenanceTable th {
-  font-size: 18px;
+  font-size: 14px;
   color: #6e6e6e;
   font-weight: 600;
-  padding: 16px 10px;
+  padding: 16px 5px;
 }
 .maintenanceTable th:first-child {
   text-align: left;
@@ -58,7 +58,7 @@ export default {};
 
 .maintenanceTable td {
   text-align: center;
-  padding: 14px 10px;
+  padding: 14px 5px;
   font-size: 15px;
   color: #555;
 }

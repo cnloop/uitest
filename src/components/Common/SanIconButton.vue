@@ -1,10 +1,12 @@
 <template>
-    <section v-setCustomStyle class="sanIconButton">
-        <slot name="iconfont"></slot>
-        <span>
-            <slot></slot>
-        </span>
-    </section>
+  <section v-setCustomStyle class="sanIconButton">
+    <span ref="iconSpan">
+      <slot name="iconfont"></slot>
+    </span>
+    <span>
+      <slot></slot>
+    </span>
+  </section>
 </template>
 <script>
 export default {
@@ -21,6 +23,7 @@ export default {
     setFontSize(el, _attrs) {
       if (!_attrs.fontSize) return;
       el.style.fontSize = _attrs.fontSize;
+      this.$refs.iconSpan.childNodes[0].style.fontSize = _attrs.fontSize;
     },
     setBorder(el, _attrs) {
       if (!_attrs.border) return;
@@ -81,13 +84,19 @@ export default {
 .sanIconButton:hover {
   background-color: #3a8ee6;
 }
-.sanIconButton > i {
+.sanIconButton > span:first-child {
   position: absolute;
   top: 50%;
   left: 5px;
   transform: translate(0, -50%);
 }
-.sanIconButton > span {
+/* .sanIconButton > i {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translate(0, -50%);
+} */
+.sanIconButton > span:last-child {
   position: absolute;
   top: 50%;
   right: 5px;

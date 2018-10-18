@@ -99,7 +99,7 @@ td {
 }
 @font-face {
   font-family: "iconfont"; /* project id 858289 */
-  src: url('//at.alicdn.com/t/font_858289_jph89x8loit.woff') format('woff');
+  src: url("//at.alicdn.com/t/font_858289_ea33rbb0gv.woff") format("woff");
 }
 
 .iconfont {
@@ -120,6 +120,8 @@ html,
 body {
   height: 100%;
   background: url(./assets/bg.png) left top;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, SimSun, sans-serif;
 }
 #app {
   height: 100%;

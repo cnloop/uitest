@@ -10,6 +10,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
     "cssnano": "^4.1.0",
     "element-ui": "^2.4.8",
     "postcss-aspect-ratio-mini": "0.0.2",
@@ -19,10 +21,14 @@
     "postcss-write-svg": "^3.0.1",
     "qx_data_format": "^1.0.0",
     "vue": "^2.5.2",
+    "vue-paginate-al": "^1.0.18",
+    "vue-pagination-2": "^2.0.3",
     "vue-router": "^3.0.1",
+    "vue-tiny-pagination": "^0.2.2",
     "vue2-datepicker": "^2.6.0",
     "vue2-datepicker-infinite": "^1.0.9",
-    "vuejs-datepicker": "^1.5.3"
+    "vuejs-datepicker": "^1.5.3",
+    "vuejs-paginate": "^2.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
